@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section>
+      <h1>Add payment card</h1>
+      <input id="name" tpye="text" placeholder="Name"></input>
+      <div id="card-element" style="width: 500px;"></div>
+      <button id="add-btn">Add card</button>
+      <div id="iframe"></div>
+    </section>
+    <hr />
+    
+    <section>
+      <h1>Stripe payment intent example</h1>
+      <p>E-mail address: donezombie@gmail.com</p>
+      <p>Product: Credit</p>
+      <p>Price: $25</p>
+      <button id="pay">Pay</button>
+    </section>
+
+    <section>
+      <div id="message"></div>
+    </section>
+
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

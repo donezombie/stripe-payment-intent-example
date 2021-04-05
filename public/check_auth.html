@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Test callbacks
+    <script src="https://js.stripe.com/v3/"></script>
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const payment_intent_client_secret = urlParams.get('payment_intent_client_secret');;
+      // window.postMessage("3DS-authentication-complete");
+      const channel = new BroadcastChannel('3DS-authentication-complete');
+      channel.postMessage(payment_intent_client_secret);
+
+      setTimeout(() => {
+        window.close();
+      }, 0);
+    </script>
+  </body>
+</html>
